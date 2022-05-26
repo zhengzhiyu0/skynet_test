@@ -1,0 +1,26 @@
+include "config.path"
+
+-- preload = "./examples/preload.lua"	-- run preload.lua before every lua service run
+thread = 8
+
+logger = nil
+logpath = "."
+-- logpath 		= "../serverlogs/"
+-- --logger 		= "userlog"
+-- logger 			= "logger"
+-- logservice 		= "snlua"
+-- loggroup   		= "group"   					-- 日志文件分组名
+-- my_logger 		= true							-- 注释 `my_logger` 将调用 `skynet.error`
+-- log_debug 		= true      	
+
+harbor = 1
+address = "127.0.0.1:2526"
+master = "127.0.0.1:2013"
+start = "main" -- main script
+bootstrap = "snlua bootstrap" -- The service for bootstrap
+standalone = "0.0.0.0:2013"
+-- snax_interface_g = "snax_g"
+cpath = root .. "cservice/?.so"
+-- daemon = "./skynet.pid"
+myname = "zhiyu"
+-- daemon 			= "./sn_daemon.pid" 			-- 后台运行时才会启用日志，注释 `daemon` 将调用 `print` 'daemon' is deprecated: first deprecated in OS X 10.5 , use launchd instead.
